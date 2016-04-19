@@ -1,0 +1,90 @@
+body{
+    background-color: #050416;
+}
+
+/*PARALLAX*/
+
+#parallax
+{
+	position: relative;
+	height: 840px;
+	z-index: 10;
+
+}
+
+.parallax_layer
+{
+	background-position: bottom center;
+	background-size: 3000px 455px;
+	background-repeat: repeat-x;
+	position: fixed;
+	height: 840px;
+	width: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+#container.touch .parallax_layer
+{
+	position: absolute;
+}
+
+#layer-0 { background-image: url("img/parallax0.png"); }
+#layer-1 { background-image: url("img/parallax1.png"); }
+#layer-2 { background-image: url("img/parallax2.png"); }
+#layer-3 { background-image: url("img/parallax3.png"); }
+#layer-4 { background-image: url("img/parallax4.png"); }
+#layer-5 { background-image: url("img/parallax5.png"); }
+
+#layer-6
+{
+	background-color: transparent;
+	background-image: url("img/parallax6.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-image: url("img/parallax6.png"), -webkit-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-image: url("img/parallax6.png"), -moz-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-image: url("img/parallax6.png"), -ms-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-image: url("img/parallax6.png"), -o-linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-image: url("img/parallax6.png"), linear-gradient(top, transparent 0, transparent 250px, #2D112B 250px);
+	background-position: center top, center bottom;
+	background-repeat: no-repeat, no-repeat;
+	height: 655px;
+	top: 385px;
+	margin-bottom: -255px;	
+}
+
+/*SECTIONS*/
+
+section {
+    height: 500px
+}
+
+#partOne {
+    background-color: aqua;
+    opacity: 0.1;
+}
+
+#partTwo {
+    background-color: coral;
+    opacity: 0.1;
+}
+
+#partThree {
+    background-color: salmon;
+    opacity: 0.1;
+}
+
+/*FOOTER*/
+
+footer {
+    background-image: url(/img/mushrooms_2.png);
+    height: 296px;
+}
+
+#mushspark{
+    height: 296px;
+}
