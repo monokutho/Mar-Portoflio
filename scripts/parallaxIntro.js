@@ -1,7 +1,6 @@
 var body = document.body;
-var container = document.getElementById("container");
-var blackout = document.getElementById("blackout");
-var firewatchlogo = document.getElementById("firewatchlogo");
+var container = document.getElementById('container');
+var viewportHeight = window.innerHeight;
 
 var isTouchscreen;
 var scrollVal = 0;
@@ -14,55 +13,17 @@ var layer4 = document.getElementById("layer-4");
 var layer5 = document.getElementById("layer-5");
 var layer6 = document.getElementById("layer-6");
 		
-function loadTrailer(url)
-{
-	var video = document.createElement('div');
-	video.setAttribute("id", "video");
-
-	var trailer = document.createElement('iframe');
-	trailer.setAttribute('src', url);
-	trailer.setAttribute('width', '853');
-	trailer.setAttribute('height', '480');
-	trailer.setAttribute('frameborder', '0');
-	trailer.setAttribute('webkitallowfullscreen', '1');
-	trailer.setAttribute('mozallowfullscreen', '1');
-	trailer.setAttribute('allowfullscreen', '1');	
-	
-	var button = document.createElement('span');
-	button.setAttribute('id', 'trailerButton');
-	button.innerHTML = "Continue";
-	
-	blackout.appendChild(video);
-	video.appendChild(trailer);
-	video.appendChild(button);
-	
-	body.setAttribute('class', 'trailer');
-}
-
-function unloadTrailer()
-{
-
-	
-	body.setAttribute('class', 'noTrailer');
-	
-	while (blackout.firstChild)
-	{
-		blackout.removeChild(blackout.firstChild);
-	}
-		
-}
 
 function setup()
 {
 	var platform = navigator.platform.toLowerCase();
 	var userAgent = navigator.userAgent.toLowerCase();
 	
-	if ( platform.indexOf('ipad') != -1  ||  platform.indexOf('iphone') != -1 ) 
+    if ( platform.indexOf('ipad') != -1  ||  platform.indexOf('iphone') != -1 ) 
 	{
 		isTouchscreen = 1;
 		container.setAttribute("class", "touch");
 		body.style.backgroundImage = 'none';
-		firewatchlogo.style.position = 'absolute';
 	}
 	
 	else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
@@ -80,7 +41,7 @@ function setup()
 		$.srSmoothscroll();
 		isTouchscreen = 0;
 	}
-
+    
 }
 
 function parallaxy()
@@ -170,3 +131,5 @@ function throttle(callback, limit) {
 		}
 	}
 }
+
+
